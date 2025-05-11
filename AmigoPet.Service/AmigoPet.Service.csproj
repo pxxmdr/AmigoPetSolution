@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AmigoPet.Data\AmigoPet.Data.csproj" />
+    <ProjectReference Include="..\AmigoPet.Domain\AmigoPet.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
