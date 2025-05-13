@@ -74,17 +74,43 @@ PUT /api/ItemChecklists/{id} — Atualiza um item existente
 
 DELETE /api/ItemChecklists/{id} — Remove um item
 
-🚀 Como Executar
-========================
+## 🚀 Como Executar
 
-Clone o repositório: git clone https://github.com/pxxmdr/AmigoPetSolution.git
+### Pré-requisitos
+- .NET 9 SDK instalado  
+- Oracle Database disponível  
+- Visual Studio 2022  
 
-Configure a conexão com o banco Oracle no arquivo appsettings.json: "ConnectionStrings": {
+## Passos
+
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/pxxmdr/AmigoPetSolution.git
+cd AmigoPetSolution
+```
+
+2. **Restaure os pacotes:**
+```bash
+dotnet restore
+```
+
+3. **Configure a conexão com o banco Oracle no arquivo `appsettings.json`:**
+```json
+"ConnectionStrings": {
   "OracleConnection": "User Id=SEU_USUARIO;Password=SUA_SENHA;Data Source=SEU_SERVIDOR"
 }
+```
 
-Execute a aplicação no Visual Studio (F5) e acesse a documentação Swagger:https://localhost:7065/swagger/index.html
+4. **Aplique as migrations:**
+```bash
+dotnet ef database update --project ./AmigoPet.Data
+```
 
+5. **Execute a aplicação:**
+```bash
+cd AmigoPet.API
+dotnet run
+```
 
 
 
